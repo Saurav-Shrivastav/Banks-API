@@ -3,3 +3,4 @@ media
 .DS_Store
 *.sqlite3
 .vscode/
+static_media/
