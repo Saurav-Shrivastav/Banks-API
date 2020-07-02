@@ -18,7 +18,7 @@ from django.urls import path, include
 from banks.views import ImportView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/banks/', include('banks.api.urls')),
-    path('import/', ImportView.as_view(), name='import')
+    path("admin/", admin.site.urls),
+    path("api/banks/", include("banks.api.urls")),
+    path("import/", ImportView.as_view(), name="import"),
 ]

@@ -8,35 +8,45 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Bank',
+            name="Bank",
             fields=[
-                ('id', models.IntegerField(default=0, editable=False, primary_key=True, serialize=False)),
-                ('name', models.CharField(max_length=50, null=True)),
+                (
+                    "id",
+                    models.IntegerField(
+                        default=0, editable=False, primary_key=True, serialize=False
+                    ),
+                ),
+                ("name", models.CharField(max_length=50, null=True)),
             ],
-            options={
-                'ordering': ('name',),
-            },
+            options={"ordering": ("name",),},
         ),
         migrations.CreateModel(
-            name='Branch',
+            name="Branch",
             fields=[
-                ('ifsc', models.CharField(max_length=11, primary_key=True, serialize=False)),
-                ('branch', models.CharField(max_length=74, null=True)),
-                ('address', models.CharField(max_length=300, null=True)),
-                ('city', models.CharField(max_length=50, null=True)),
-                ('district', models.CharField(max_length=50, null=True)),
-                ('state', models.CharField(max_length=26, null=True)),
-                ('bank_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='banks.Bank')),
+                (
+                    "ifsc",
+                    models.CharField(max_length=11, primary_key=True, serialize=False),
+                ),
+                ("branch", models.CharField(max_length=74, null=True)),
+                ("address", models.CharField(max_length=300, null=True)),
+                ("city", models.CharField(max_length=50, null=True)),
+                ("district", models.CharField(max_length=50, null=True)),
+                ("state", models.CharField(max_length=26, null=True)),
+                (
+                    "bank_id",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="banks.Bank"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Branch',
-                'verbose_name_plural': 'Branches',
-                'ordering': ('branch',),
+                "verbose_name": "Branch",
+                "verbose_name_plural": "Branches",
+                "ordering": ("branch",),
             },
         ),
     ]

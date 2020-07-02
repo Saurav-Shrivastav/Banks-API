@@ -12,8 +12,8 @@ class BankResource(resources.ModelResource):
 class BranchResource(resources.ModelResource):
     class Meta:
         model = Branch
-        exclude = ('id',)
-        import_id_fields = ('ifsc', )
+        exclude = ("id",)
+        import_id_fields = ("ifsc",)
 
 
 class BankAdmin(ImportExportModelAdmin):
