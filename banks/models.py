@@ -17,11 +17,11 @@ class Branch (models.Model):
 
     ifsc = models.CharField(max_length = 11, primary_key = True)
     bank_id = models.ForeignKey(Bank, on_delete=models.CASCADE)
-    branch = models.CharField(max_length = 74, null = True)
+    branch = models.CharField(max_length = 100, null = True)
     address = models.CharField(max_length = 300, null = True)
-    city = models.CharField(max_length = 50, null = True)
-    district = models.CharField(max_length = 50, null = True)
-    state = models.CharField(max_length = 26, null = True)
+    city = models.CharField(max_length = 200, null = True)
+    district = models.CharField(max_length = 200, null = True)
+    state = models.CharField(max_length = 100, null = True)
 
     class Meta:
         ordering = ('branch',)
