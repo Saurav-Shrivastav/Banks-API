@@ -14,7 +14,7 @@ openpyxl==3.0.4
 psycopg2==2.8.5
 psycopg2-binary==2.8.5
 pytz==2020.1
-PyYAML==5.3.1
+PyYAML==5.4
 sqlparse==0.3.1
 tablib==2.0.0
 uuid==1.30
